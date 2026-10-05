@@ -63,7 +63,7 @@ performance_category = np.where(
         np.where(
             performance >= 80,
             "Good",
-            (np.where(performance >= 70, "Try Hard", "Keep going")),
+            (np.where(performance >= 70, "Average", "Needs Improvement")),
         )
     ),
 )
