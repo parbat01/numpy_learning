@@ -41,3 +41,17 @@ salary_sd = np.std(salaries)
 # finding highest paid employee
 index_of_highest_salary = np.argmax(salaries)
 highest_paid_employee = employees[index_of_highest_salary]
+# finding lowest paid employee
+index_of_lowest_salary = np.argmin(salaries)
+lowest_paid_employee = employees[index_of_lowest_salary]
+employees_earning_more_than_60k_boolean = salaries > 60000
+employees_earning_more_than_60k = employees[employees_earning_more_than_60k_boolean]
+salary_of_employee_earning_more_than_60k = salaries[
+    employees_earning_more_than_60k_boolean
+]
+high_performance = performance > 90
+print(
+    f" Name :{employees[high_performance]}\nPerformance :{performance[high_performance]}\n Salary :{salaries[high_performance]}"
+)  # people with 90 above performance
+high_exp = experience > 5
+print(f"{employees[high_exp]}\n{experience[high_exp]}")
